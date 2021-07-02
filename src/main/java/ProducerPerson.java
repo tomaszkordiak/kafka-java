@@ -9,6 +9,7 @@ public class ProducerPerson {
         props.put("bootstrap.servers", "localhost:9092, localhost:9093, localhost:9094");
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("acks", "all");
 
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(props);
 
